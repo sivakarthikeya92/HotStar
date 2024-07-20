@@ -6,7 +6,7 @@ navbar_div.innerHTML = navbar();
 async function searchMovies() {
     try {
         let query = document.getElementById("query").value;
-        let response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=4b646874`);
+        let response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=your_api_key`);
         let data = await response.json();
         appendMovies(data.Search);
     } catch (error) {
